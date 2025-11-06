@@ -6,6 +6,8 @@ class NotificationRepository{
   NotificationRepository(this._notificationServices);
 
   Future<void> initializeNotification()async{
-    _notificationServices.requestNotificationPermission();
+   await _notificationServices.requestNotificationPermission();
+  await  _notificationServices.getDeviceToken();
+   _notificationServices.firebaseInit();
   }
 }
