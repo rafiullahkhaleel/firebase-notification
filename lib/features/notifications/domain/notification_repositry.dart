@@ -9,5 +9,6 @@ class NotificationRepository{
    await _notificationServices.requestNotificationPermission();
   await  _notificationServices.getDeviceToken();
    _notificationServices.firebaseInit();
+   _notificationServices.initLocalNotification();
   }
 }
